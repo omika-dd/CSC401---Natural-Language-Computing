@@ -1,0 +1,24 @@
+Accuracy
+
+Classifier 500:
+0.355421686747
+
+Classifier 2500:
+0.355421686747
+
+Classifier 5000:
+0.355421686747
+
+Discussion on difference from section 3.2:
+
+Not sure if we did this correctly as we got the same accuracy values for all classifiers.
+We also got the same accuracy values for all classifiers for section 4 and section 3.2.
+We had imagined to see the accuracy value increase as the n increased because there was a larger
+data set to train on, and therefore improved accuracy.
+
+We found this strange and it was not what we expected.
+
+If they are the correct values, then I was surprised to see that they remained the same
+as n increased. As for the reason they are the same as the WEKA classifier in sec 3.2,
+we guess that the NLC classifier and the WEKA classifier work similarly and run on
+similar algorithms.
