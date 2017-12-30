@@ -1,0 +1,39 @@
+Task 3: Perplexity Calculations
+
+English
+  MLE (delta = 0):      13.4613
+  Add-delta versions:
+    delta = 0.1:        62.0054
+    delta = 0.25:       80.4715
+    delta = 0.5:        102.7980
+    delta = 0.75:       120.9558
+    delta = 1:          136.9325
+
+French
+  MLE (delta = 0):      12.9050
+  Add-delta versions:
+    delta = 0.1:        64.2661
+    delta = 0.25:       86.1801
+    delta = 0.5:        113.1294
+    delta = 0.75:       135.4092
+    delta = 1:          155.2381
+
+Report:
+The choice of delta is theoretically justified as the expectation of the same quantity
+maximized by MLE. The purpose of adding smoothing is to give some probability
+allowance to unseen events. Without smoothing, these unseen events are given a
+probability of 0 (with MLE). In MLE, delta = 0, and N is the size of entire vocabulary.
+
+With Lidstone's law, delta is set to 1. This yields a significant amount of probability
+space to unseen events. This is Lidstone's law's main criticism. I tested smoothing
+using Lidstone's law by setting delta = 1. This gave me the highest perplexity value.
+
+To combat this criticism, Laplace's smoothing was introduced, where choosing small delta
+eliminates the concern of giving too much probability space to unseen events. The
+most commonly used value for delta is 0.5.
+
+I tested for 5 values. The most common, 0.5, the extremes, 0 (MLE) and 1 (Lidstone),
+and a few values in between.
+
+From these results, the perplexity increases with delta.
+This shows that increasing delta smoothing yields a weaker language model.
